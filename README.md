@@ -3,8 +3,7 @@
 ## Install rabbitmq on Mac OSX
 $brew install  
 $rabbitmq-sever &  
-http://localhost:15672/  
-$rabbitmqctl status
+
 
 ## Install rabbitmq on Debian
 $apt update  
@@ -13,7 +12,8 @@ $systemctl status rabbitmq-server.service
 $rabbitmqctl status
 
 ## Configuration
-$rabbitmq-plugins enable rabbitmq-management  
+$rabbitmq-plugins enable rabbitmq_management  
+http://localhost:15672/  
 $rabbitmqctl delete_user guest  
 $rabbitmqctl add_user myadmin adminp@ssword  
 $rabbitmqctl set_user_tags myadmin administrator  
@@ -24,8 +24,11 @@ $rabbitmqctl add_user gensub rabbitmq
 $rabbitmqctl set_permissions -p / gensub ".\*" ".\* " ".\*"  
 $rabbitmqctl list_users  
 $rabbitmq-plugins list_users
+$rabbitmqctl status
+
 
 # npm
+$npm install date-utils
 $npm install amqp  
 $npm install amqplib  
 pub1.js and sub1.js are using amqp  
