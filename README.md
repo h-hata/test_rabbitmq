@@ -28,7 +28,7 @@ $rabbitmqctl status
 
 
 # npm
-$npm install date-utils
+$npm install date-utils  
 $npm install amqp  
 $npm install amqplib  
 pub1.js and sub1.js are using amqp  
