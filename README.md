@@ -23,7 +23,7 @@ $rabbitmqctl set_permissions -p / genpub ".\*" ".\* " ".\*"
 $rabbitmqctl add_user gensub rabbitmq  
 $rabbitmqctl set_permissions -p / gensub ".\*" ".\* " ".\*"  
 $rabbitmqctl list_users  
-$rabbitmq-plugins list_users
+$rabbitmq-plugins list_users  
 $rabbitmqctl status
 
 
