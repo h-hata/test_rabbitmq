@@ -12,8 +12,6 @@ $systemctl status rabbitmq-server.service
 $rabbitmqctl status
 
 ## Configuration
-$rabbitmq-plugins enable rabbitmq_management  
-http://localhost:15672/  
 $rabbitmqctl delete_user guest  
 $rabbitmqctl add_user myadmin adminp@ssword  
 $rabbitmqctl set_user_tags myadmin administrator  
@@ -23,8 +21,8 @@ $rabbitmqctl set_permissions -p / genpub ".\*" ".\* " ".\*"
 $rabbitmqctl add_user gensub rabbitmq  
 $rabbitmqctl set_permissions -p / gensub ".\*" ".\* " ".\*"  
 $rabbitmqctl list_users  
-$rabbitmq-plugins list_users  
-$rabbitmqctl status
+$rabbitmq-plugins enable rabbitmq_management  
+http://localhost:15672/  
 
 
 # npm
